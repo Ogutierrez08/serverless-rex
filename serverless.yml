@@ -1,0 +1,55 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: serverless-rex
+useDotenv: true
+frameworkVersion: '3'
+plugins:
+  - serverless-auto-swagger
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+  # iamRoleStatements:
+  #   - Effect: Allow
+      # Action:
+      #   - dynamodb:*
+      # Resource:
+      #   - arn:aws:dynamodb:sa-east-1:094275984805:table/charactersTable
+
+functions:
+  getVentas:
+    handler: src/functions/ventas.getVentas
+    events:
+      - httpApi:
+          path: /obtener/ventas
+          method: get
+# resources:
+#   Resources:
+#     charactersTable:
+#       Type: AWS::DynamoDB::Table
+#       Properties:
+#         TableName: charactersTable
+#         AttributeDefinitions:
+#           - AttributeName: id
+#             AttributeType: S
+#         KeySchema:
+#           - AttributeName: id
+#             KeyType: HASH
+#         ProvisionedThroughput:
+#           ReadCapacityUnits: 1
+#           WriteCapacityUnits: 1
+
+

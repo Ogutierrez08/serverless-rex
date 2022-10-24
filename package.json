@@ -1,0 +1,23 @@
+{
+  "name": "reto-tecnico-indra",
+  "version": "1.0.0",
+  "description": "Nodejs + AWS Lambda + Serverless Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Oscar Gutierrez (alxgutierrez08@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1219.0",
+    "axios": "^0.27.2",
+    "mssql": "^9.0.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "serverless-auto-swagger": "^2.8.2",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "supertest": "^6.2.4"
+  }
+}
