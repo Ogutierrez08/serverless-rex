@@ -1,4 +1,4 @@
-# Star Wars API 
+# Serverless Rex
 
 
 ### Pasos
